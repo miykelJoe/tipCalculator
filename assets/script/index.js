@@ -13,6 +13,10 @@ calculateTip.onclick = function (){
 
     if (isNaN(totalBill) || isNaN(people)){
         alert('Only figures can be used for Bill and Population')
+    }else if (totalBill == ''){
+        alert('Add value to Bill')
+    }else if (percent == 0){
+        alert('Choose an option')
     }else{
         displayResult.style.display = 'flex'
     
