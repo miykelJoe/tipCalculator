@@ -13,21 +13,20 @@ calculateTip.onclick = function (){
 
     if (isNaN(totalBill) || isNaN(people)){
         alert('Only figures can be used for Bill and Population')
-    }else if (totalBill == ''){
+    }else if (totalBill === ''){
         alert('Add value to Bill')
     }else if (percent == 0){
         alert('Choose an option')
     }else{
         displayResult.style.display = 'flex'
     
-        if(people == 1 ){
-        each.style.display = 'none'
+        if(people <= 1 ){
+            people = 1
+            each.style.display = 'none'
         }else{
-        each.style.display = 'block'
+            each.style.display = 'block'
         }
-    
-        let amount = ((totalBill * percent)/ people)
-        let result = amount.toFixed(2)
-        tip.innerText = result
+
+        tip.innerText = ((totalBill * percent)/ people).toFixed(2)
 }
 }
