@@ -11,7 +11,9 @@ calculateTip.onclick = function (){
     let percent = servicePercent.value
     let people = population.value || 1
 
-    let tipCalculation = function () {
+    if (isNaN(totalBill) || isNaN(people)){
+        alert('Only figures can be used for Bill and Population')
+    }else{
         displayResult.style.display = 'flex'
     
         if(people == 1 ){
@@ -23,13 +25,5 @@ calculateTip.onclick = function (){
         let amount = ((totalBill * percent)/ people)
         let result = amount.toFixed(2)
         tip.innerText = result
-    }
-    
-    let text = 'Only figures can be used for Bill and Population'
-
-    if (isNaN(totalBill) || isNaN(people)){
-        alert(text)
-    }else{
-    tipCalculation()
 }
 }
