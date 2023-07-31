@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Tip Calculator</h1>
+
+            <form id="form" action="#">
+                <div>
+                <span>How much is your bill?</span>
+                <span>
+                    $ <input type="text" id="bill" placeholder="Bill">
+                </span>
+                </div>
+
+                <div>
+                <span>How was your service</span>
+                <span class="experience">
+                    <select id="serviceQuality">
+                        <option disabled selected value="0">-- Choose options --</option>
+                        <option value=".3">30% Excellent</option>
+                        <option value=".2">20% Good</option>
+                        <option value=".15">15% Not bad</option>
+                        <option value=".1">10% Fair</option>
+                        <option value=".05">5% Terible</option>
+                    </select>
+                </span>
+                </div>
+
+                <div>
+                <span>
+                    How many people are sharing the bill?
+                </span>
+                <span>
+                    <input type="text" id="people" placeholder="Population"> people
+                </span>
+                </div>
+                
+                <span class="btn-result">
+                <button type="button" id="btn">Calculate!</button>
+                
+                <span class="result">
+                    <sup>$</sup> 
+                    <span id="result">0.00</span>
+                    <small id="each">each</small>
+                </span>
+                </span>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="assets/script/index.js"></script>
+</body>
+</html>

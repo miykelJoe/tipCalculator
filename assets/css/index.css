@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #aaa;
+}
+body .container {
+  display: flex;
+  flex-direction: column;
+  border: 0.3px solid black;
+  background-color: #777;
+  width: 30%;
+  max-width: 60em;
+  border: none;
+  border-radius: 2em;
+}
+body .container .calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+  margin: 0 0 1em 0;
+}
+body .container .calculator h1 {
+  margin: 10%;
+  padding: 5%;
+  border-bottom: 0.03em solid #ddd;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+body .container .calculator form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+}
+body .container .calculator form div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 1em;
+  font-size: clamp(1.6rem, 2.7vw, 2rem);
+}
+body .container .calculator form input,
+body .container .calculator form select {
+  padding: 0.3em;
+  margin: 0.5em 0;
+  border-radius: 0.2em;
+  border: none;
+}
+body .container .calculator form select {
+  width: 60%;
+}
+body .container .calculator form input[type=text] {
+  width: 30%;
+}
+body .container .calculator form .experience {
+  display: flex;
+  flex-direction: column;
+}
+body .container .calculator form .btn-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body .container .calculator form .btn-result .result {
+  font-size: clamp(3rem, 3vw, 4.5rem);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  -moz-column-gap: 0.15em;
+       column-gap: 0.15em;
+}
+body .container .calculator form .btn-result .result sup {
+  font-size: clamp(1rem, 2vw, 1.7rem);
+}
+body .container .calculator form .btn-result .result:after {
+  content: "Tip Amount";
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  font-size: clamp(0.8rem, 1.5vw, 1.4rem);
+}
+body .container .calculator form .btn-result button {
+  background-color: rgb(221, 221, 221);
+  padding: 0.6em;
+  border-radius: 0.4em;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #222;
+  text-transform: uppercase;
+}
+body .container .calculator form .btn-result button:hover {
+  background-color: rgb(58, 66, 64);
+  border-bottom-color: #111;
+}
+body .container .calculator form .btn-result button:active {
+  position: relative;
+  top: 0.1em;
+}
+
+@media (max-width: 900px) {
+  body {
+    background-color: #232323;
+  }
+  body .container {
+    width: 50%;
+  }
+  body .container .calculator h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+}
+@media (max-width: 450px) {
+  body .container {
+    width: 70%;
+  }
+  body .container .calculator h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+  body .container .calculator form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .container .calculator form div span {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -moz-column-gap: 2%;
+         column-gap: 2%;
+    font-size: clamp(1rem, 5vw, 2rem);
+  }
+  body .container .calculator form div span input,
+  body .container .calculator form div span select {
+    padding: 0.6em;
+  }
+  body .container .calculator form div span select {
+    width: 100%;
+  }
+  body .container .calculator form div span input[type=text] {
+    width: 50%;
+  }
+  body .container .calculator form .btn-result #btn {
+    background-color: rgb(221, 221, 221);
+    width: 80%;
+    padding: 0.6em;
+    border-radius: 0.4em;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #222;
+    text-transform: uppercase;
+    font-size: clamp(0.7rem, 2.3vw, 1.9rem);
+  }
+  body .container .calculator form .btn-result #btn:hover {
+    background-color: rgb(58, 66, 64);
+    border-bottom-color: #111;
+  }
+  body .container .calculator form .btn-result #btn:active {
+    position: relative;
+    top: 0.1em;
+  }
+}/*# sourceMappingURL=index.css.map */
